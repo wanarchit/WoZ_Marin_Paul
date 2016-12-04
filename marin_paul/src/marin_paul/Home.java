@@ -69,6 +69,28 @@ public class Home extends JFrame implements ActionListener {
        
        this.setTitle("Home page ! ");// Titre
        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       //-----------------------------------------------------------------------
+
+    JFrame frame = new JFrame("Test");
+    BufferedImage image= null;
+    try {
+        image = ImageIO.read(new File("fond1.png"));
+        }catch (IOException e){
+        }
+    frame.setContentPane(new JPanel() {
+        
+        public void paintComponent(Graphic g){
+            super.paintComponent(g);
+            g.drawImage(image, 0,0,300,300,this);
+        }
+
+//    public void paintComponent(Graphics g) {
+            //super.paintComponent(g);
+           // g.drawImage(image, 0, 0, 300, 300, this);
+        });
+
+   
+       //-----------------------------------------------------------------------
        
        //1er label de la frame 
        label = new JLabel ("Choose your player and click on start to begin your game!",JLabel.CENTER);
