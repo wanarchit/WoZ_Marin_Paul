@@ -11,9 +11,9 @@ public class InitializeGame2 {
     private Player myPlayer;
     private Icon play;
     private NPC monst1,monst2,monst3,monst4,monst5,monst6,monst7,monst8,monst9,monst10,monst11,monst12,monst13,monst14;
-    private Icon picmonst1;
+    private Icon picmonst1,picmonst2,picmonst3,picmonst4,picmonst5,picmonst6,picmonst7,picmonst8,picmonst9,picmonst10,picmonst11,picmonst12,picmonst13,picmonst14;
     private NPC NPC1,NPC2,NPC3,NPC4,NPC5,NPC6;
-    private Icon picNPC1;
+    private Icon picNPC1,picNPC2,picNPC3,picNPC4,picNPC5,picNPC6;
     private Consummable healthPotionP,healthPotionG,chickenThigh, poisonPotionP,poisonPotionG,kiss,bagExt;
     private Weapon sword,axe,axe2;
     private Armor shield,shield2;
@@ -187,33 +187,51 @@ public class InitializeGame2 {
             //Monster :
         picmonst1 = new ImageIcon("images/monstre1.PNG");
         monst1 = new NPC("Spider",0,0,0,0,null,null,true,"",picmonst1);
-        monst2 = new NPC("Mummy",0,0,0,0,null,null,true,"",null);
-        monst3 = new NPC("Mutant Rat",0,0,0,0,null,null,true,"",null);
-        monst4 = new NPC("Troll",0,0,0,0,null,null,true,"",null);
+        picmonst2 = new ImageIcon("images/dungeonMummy.jpg");
+        monst2 = new NPC("Mummy",0,0,0,0,null,null,true,"",picmonst2);
+        picmonst3 = new ImageIcon("images/dungeonRat.jpg");
+        monst3 = new NPC("Mutant Rat",0,0,0,0,null,null,true,"",picmonst3);
+        picmonst4 = new ImageIcon("images/dungeonOrcWoW.PNG");
+        monst4 = new NPC("Troll",0,0,0,0,null,null,true,"",picmonst4);
         monst4.getInventory().addObject(door10.getKey());
-        monst5 = new NPC("Dark Knight",0,0,0,0,null,null,true,"",null);
-        monst6 = new NPC("Wizard",0,0,0,0,null,null,true,"",null);
-        monst7 = new NPC("Witch",0,0,0,0,null,null,true,"",null);
-        monst8 = new NPC("Lich",0,0,0,0,null,null,true,"",null); // Half-Boss
-        monst9 = new NPC("Baby Dragon Female",0,0,0,0,null,null,true,"",null);
-        monst10 = new NPC("Baby Dragon Male",0,0,0,0,null,null,true,"",null);
-        monst11 = new NPC("Big Dragon",0,0,0,0,null,null,true,"",null);
+        picmonst5 = new ImageIcon("images/dungeonBoss.jpg");
+        monst5 = new NPC("Dark Knight",0,0,0,0,null,null,true,"",picmonst5);
+        picmonst6 = new ImageIcon("images/dungeonWizard.jpg");
+        monst6 = new NPC("Wizard",0,0,0,0,null,null,true,"",picmonst6);
+        picmonst7 = new ImageIcon("images/dungeonWitch.jpg");
+        monst7 = new NPC("Witch",0,0,0,0,null,null,true,"",picmonst7);
+        picmonst8 = new ImageIcon("images/dungeonLich.jpg");
+        monst8 = new NPC("Lich",0,0,0,0,null,null,true,"",picmonst8); // Half-Boss
+        picmonst9 = new ImageIcon("images/dungeonBabyDragon.jpg");
+        monst9 = new NPC("Baby Dragon Female",0,0,0,0,null,null,true,"",picmonst9);
+        picmonst10 = new ImageIcon("images/dungeonBabyDragon.jpg");
+        monst10 = new NPC("Baby Dragon Male",0,0,0,0,null,null,true,"",picmonst10);
+        picmonst11 = new ImageIcon("images/dungeonDragon.jpg");
+        monst11 = new NPC("Big Dragon",0,0,0,0,null,null,true,"",picmonst11);
         monst11.getInventory().addObject(door6.getKey());
-        monst12 = new NPC("Evil Pony",0,0,0,0,null,null,true,"",null); // Boss P1
+        picmonst12 = new ImageIcon("images/evilPony.jpg");
+        monst12 = new NPC("Evil Pony",0,0,0,0,null,null,true,"",picmonst12); // Boss P1
         monst12.getInventory().addObject(door1.getKey());
         monst12.getInventory().addObject(door20.getKey());
-        monst13 = new NPC("Enraged Unicorn",0,0,0,0,null,null,true,"",null); // Boss P2
-        monst14 = new NPC("Goblin",0,0,0,0,null,null,true,"",null);
+        picmonst13 = new ImageIcon("images/evilUnicorn.jpg");
+        monst13 = new NPC("Enraged Unicorn",0,0,0,0,null,null,true,"",picmonst13); // Boss P2
+        picmonst14 = new ImageIcon("images/dungeonGoblin.jpg");
+        monst14 = new NPC("Goblin",0,0,0,0,null,null,true,"",picmonst14);
         
             //PNJ Friendly :
-        picNPC1 = new ImageIcon("images/dungeonDwarf.PNG");
+        picNPC1 = new ImageIcon("images/dungeonWaiter.jpg");
         NPC1 = new NPC("Server",0,0,0,0,null,null,false,"",picNPC1); // MDP + Seller (potions++ + arme up)
-        NPC2 = new NPC("Father Fouras",0,0,0,0,null,null,false,"",null); // enigme => MDP
-        NPC3 = new NPC("Keys Keeper",0,0,0,0,null,null,false,"",null); // Seller (key + armor up++ + potion)
+        picNPC2 = new ImageIcon("images/pereFouras.jpg");
+        NPC2 = new NPC("Father Fouras",0,0,0,0,null,null,false,"",picNPC2); // enigme => MDP
+        picNPC3 = new ImageIcon("images/dungeonKeyKeeper.jpg");
+        NPC3 = new NPC("Keys Keeper",0,0,0,0,null,null,false,"",picNPC3); // Seller (key + armor up++ + potion)
         NPC3.getInventory().addObject(door14.getKey());
-        NPC4 = new NPC("Grandfather Fouras",0,0,0,0,null,null,false,"",null); // big enigme => indice MDP
-        NPC5 = new NPC("Smuggler",0,0,0,0,null,null,false,"",null); // Big seller (potion+++);
-        NPC6 = new NPC("Princess",0,0,0,0,null,null,false,"",null); // princess
+        picNPC4 = new ImageIcon("images/julienLepers.jpg");
+        NPC4 = new NPC("Julien Lepers",0,0,0,0,null,null,false,"",picNPC4); // big enigme => indice MDP
+        picNPC5 = new ImageIcon("images/dungeonSmugglers.jpg");
+        NPC5 = new NPC("Smuggler",0,0,0,0,null,null,false,"",picNPC5); // Big seller (potion+++);
+        picNPC6 = new ImageIcon("images/princess.jpg");
+        NPC6 = new NPC("Princess",0,0,0,0,null,null,false,"",picNPC6); // princess
         
         // adding items
         /**monster1.getInventory().addObject(healthPotion);
@@ -310,6 +328,26 @@ public class InitializeGame2 {
         
         // Adding monster in room
         room1.addNPC(monst1);
+        //----------------------------------
+        room1.addNPC(monst2);
+        room1.addNPC(monst3);
+        room1.addNPC(monst4);
+        room1.addNPC(monst5);
+        room1.addNPC(monst6);
+        room1.addNPC(monst7);
+        room1.addNPC(monst8);
+        room1.addNPC(monst9);
+        room1.addNPC(monst10);
+        room1.addNPC(monst11);
+        room1.addNPC(monst12);
+        room1.addNPC(monst13);
+        room1.addNPC(monst14);
+        room1.addNPC(NPC2);
+        room1.addNPC(NPC3);
+        room1.addNPC(NPC4);
+        room1.addNPC(NPC5);
+        room1.addNPC(NPC6);
+        //----------------------------------
         room3.addNPC(monst1);
         room5.addNPC(monst2);
         room11.addNPC(monst3);
