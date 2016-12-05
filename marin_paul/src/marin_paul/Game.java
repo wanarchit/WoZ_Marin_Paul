@@ -99,7 +99,7 @@ public class Game extends JFrame implements ActionListener{
         
         // myFrame
         this.setTitle("My Interface Test2");
-        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setPreferredSize(new Dimension(900,700));
         
         this.add(myPanelG);

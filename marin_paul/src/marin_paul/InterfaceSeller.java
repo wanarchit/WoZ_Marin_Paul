@@ -121,7 +121,10 @@ public class InterfaceSeller extends JPanel implements ActionListener{
     }
     
     public void actionPerformed (ActionEvent e){
-        if (e.getSource().equals(attack)){
+        if (e.getSource().equals(speak)){
+            InterfaceDialogue2 dialog = new InterfaceDialogue2(p,seller,mainFrame);
+        
+        }else if (e.getSource().equals(attack)){
             Object[]options = {"Attack !","Stay friendly !"};
                 
             int option = JOptionPane.showOptionDialog(this,
@@ -159,7 +162,13 @@ public class InterfaceSeller extends JPanel implements ActionListener{
         
         
         }else if (e.getSource().equals(trade)){
-            new InterfaceTrade(p,seller);
+            if(seller.getName().equals("Princess")){
+                JFrame messFrame = new JFrame();
+                JOptionPane d = new JOptionPane();
+                d.showMessageDialog(messFrame, "I have nothing to sell <3", 
+                "", JOptionPane.INFORMATION_MESSAGE);
+            }else{
+            new InterfaceTrade(p,seller);}
         }
                 
                 
