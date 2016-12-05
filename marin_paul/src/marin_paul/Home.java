@@ -71,23 +71,6 @@ public class Home extends JFrame implements ActionListener {
        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
        //-----------------------------------------------------------------------
 
-    JFrame frame = new JFrame("Test");
-    BufferedImage image= null;
-    try {
-        image = ImageIO.read(new File("fond1.png"));
-        }catch (IOException e){
-        }
-    frame.setContentPane(new JPanel() {
-        
-        public void paintComponent(Graphic g){
-            super.paintComponent(g);
-            g.drawImage(image, 0,0,300,300,this);
-        }
-
-//    public void paintComponent(Graphics g) {
-            //super.paintComponent(g);
-           // g.drawImage(image, 0, 0, 300, 300, this);
-        });
 
    
        //-----------------------------------------------------------------------
@@ -203,13 +186,7 @@ public class Home extends JFrame implements ActionListener {
        myMainPanel.add(panelJoueur);
        myMainPanel.add(panelStart2);
        myMainPanel.setOpaque(false);
-        
-       
-       myFrame.pack();
-       myFrame.add(myMainPanel);
-       myFrame.setSize(1000, 700);
-       myFrame.setVisible(true);
-       
+     
        //Action definition for every buttons
        but1.addActionListener(this); 
        but2.addActionListener(this);
@@ -222,7 +199,28 @@ public class Home extends JFrame implements ActionListener {
        
        butStart.setEnabled(false);
        butChange.setEnabled(false);
+       Container c = new JLabel(makeImage());
+       c.setLayout(new FlowLayout());
+       c.add(myMainPanel);
+       c.setPreferredSize(new Dimension(800,800));
+       c.setMaximumSize(new Dimension(800,800));
+       c.setMinimumSize(new Dimension(800,800));
+       this.add(c);
+       this.setVisible(true);
+       this.setPreferredSize(new Dimension(1000,650));
+       this.setMaximumSize(new Dimension(1000,650));
+       this.setMinimumSize(new Dimension(1000,650));
                
+   }
+   private ImageIcon makeImage(){
+       BufferedImage image= null;
+        try {
+        image = ImageIO.read(new File("images/fond1.PNG"));
+        }catch (IOException e){
+        }
+       Graphics g = image.getGraphics();
+
+       return new ImageIcon(image);      
    }
    
    //////////////////////////////////////////////////////////////////////////////
