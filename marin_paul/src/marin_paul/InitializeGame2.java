@@ -15,6 +15,7 @@ public class InitializeGame2 {
     private NPC NPC1,NPC2,NPC3,NPC4,NPC5,NPC6;
     private Icon picNPC1,picNPC2,picNPC3,picNPC4,picNPC5,picNPC6;
     private Consummable healthPotionP,healthPotionG,chickenThigh, poisonPotionP,poisonPotionG,kiss,bagExt;
+    private Icon kissPic;
     private Weapon sword,axe,axe2;
     private Armor shield,shield2;
     private Room room0,room1,room2,room3,room4,room5,room6,room7,room8,room9,room10,room11,room12,room13,room14,room15,room16,room17,room18,room19,room20;
@@ -145,9 +146,9 @@ public class InitializeGame2 {
         door20b = new Door(false,room16,room9,picDoor);
         
         // MagicDoor : name, pass, lock, Room Actual, Room Next, pictDoor
-        door9 = new MagicDoor("Cellar Door","porte",true,room6,room11,picDoor);
+        door9 = new MagicDoor("Cellar Door","BCJMMP",true,room6,room11,picDoor);
         door9b = new Door(false,room11,room6,picDoor);
-        door16 = new MagicDoor("Dangerous Door","",true,room18,room15,picDoor);
+        door16 = new MagicDoor("Dangerous Door",nameP,true,room18,room15,picDoor);
         door16b = new Door(false,room15,room18,picDoor);
         door19 = new MagicDoor("Dragons Door","",true,room9,room8,picDoor);
         door19b = new Door(false,room8,room9,picDoor);
@@ -174,7 +175,8 @@ public class InitializeGame2 {
         chickenThigh = new Consummable("chickenThigh",5,15,null);
         healthPotionG = new Consummable("Big Life Potion",25,50,null);
         poisonPotionG = new Consummable("Deadly Poison",50,-40,null);
-        kiss = new Consummable("Princess Kiss",0,100,null);
+        kissPic = new ImageIcon("images/kiss.PNG");
+        kiss = new Consummable("Princess Kiss",0,100,kissPic);
         bagExt = new Consummable("Extension Bag",45,10,null);
         
         
@@ -281,7 +283,7 @@ public class InitializeGame2 {
             inv = 5;
             play = null ;
             startWeap = new Weapon("",0,0,null);
-        }else if(nameP.equals("Clément")){
+        }else if(nameP.equals("Clement")){
             str = 5;
             def = 5;
             mon = 5;
@@ -319,6 +321,11 @@ public class InitializeGame2 {
         
         // Adding NPC in room
         room1.addNPC(NPC1);
+        room1.addNPC(NPC2);
+        room1.addNPC(NPC3);
+        room1.addNPC(NPC4);
+        room1.addNPC(NPC5);
+        room1.addNPC(NPC6);
         room4.addNPC(NPC1);
         room9.addNPC(NPC5);
         room10.addNPC(NPC4);
